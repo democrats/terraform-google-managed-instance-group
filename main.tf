@@ -23,7 +23,7 @@ resource "google_compute_instance_template" "default" {
 
   region = "${var.region}"
 
-  tags = concat(list("allow-ssh"), var.target_tags)
+  tags = var.target_tags
 
   labels = "${var.instance_labels}"
 
