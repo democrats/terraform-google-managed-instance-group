@@ -114,10 +114,10 @@ resource "google_compute_instance_group_manager" "default" {
     initial_delay_sec = "${var.hc_initial_delay}"
   }
 
-  provisioner "local-exec" {
-    when    = "destroy"
-    command = "${var.local_cmd_destroy}"
-  }
+  /* provisioner "local-exec" { */
+  /*   when    = "destroy" */
+  /*   command = "${var.local_cmd_destroy}" */
+  /* } */
 
   provisioner "local-exec" {
     when    = "create"
@@ -185,10 +185,10 @@ resource "google_compute_region_instance_group_manager" "default" {
     port = "${var.service_port}"
   }
 
-  provisioner "local-exec" {
-    when    = "destroy"
-    command = "${var.local_cmd_destroy}"
-  }
+  /* provisioner "local-exec" { */
+  /*   when    = "destroy" */
+  /*   command = "${var.local_cmd_destroy}" */
+  /* } */
 
   provisioner "local-exec" {
     when    = "create"
